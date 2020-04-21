@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2364354D244F68FC0008DB28 /* ImageFetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364354C244F68FC0008DB28 /* ImageFetchable.swift */; };
 		5E352F9E229BF4D40070AA2A /* ImageCachingKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E352F9C229BF4D40070AA2A /* ImageCachingKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5E352FA5229BF4EF0070AA2A /* ImageCachingKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E352FA4229BF4EF0070AA2A /* ImageCachingKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2364354C244F68FC0008DB28 /* ImageFetchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetchable.swift; sourceTree = "<group>"; };
 		5E352F99229BF4D40070AA2A /* ImageCachingKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImageCachingKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E352F9C229BF4D40070AA2A /* ImageCachingKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageCachingKit.h; sourceTree = "<group>"; };
 		5E352F9D229BF4D40070AA2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 			children = (
 				5E352F9C229BF4D40070AA2A /* ImageCachingKit.h */,
 				5E352FA4229BF4EF0070AA2A /* ImageCachingKit.swift */,
+				2364354C244F68FC0008DB28 /* ImageFetchable.swift */,
 				5E352F9D229BF4D40070AA2A /* Info.plist */,
 			);
 			path = ImageCachingKit;
@@ -134,6 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2364354D244F68FC0008DB28 /* ImageFetchable.swift in Sources */,
 				5E352FA5229BF4EF0070AA2A /* ImageCachingKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
