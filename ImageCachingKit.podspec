@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ImageCachingKit'
-  s.version          = '1.0.1'
+  s.version          = '1.1.0'
   s.summary          = 'Image Caching Library for iOS written in Swift 5, that uses the filesystem as caching storage.'
 
 # This description is used to generate tags and improve search results.

@@ -12,7 +12,7 @@ import Foundation
 /// A protocol that makes everyone that conforms to it able to download images from url with two layers of caching - in memory and on disk. Get the image by invoking `fetchPreview(withCompletion:)`.
 ///
 /// Using it is really easy with these simple steps:
-/// - conform to this protocol (you are required to have a `url` property)
+/// - conform to this protocol (you are required to have a `url` and `inMemoryPreview` properties)
 /// - invoke `fetchPreview(withCompletion:)` and you will get your image, the rest is taking care of the framework.
 public protocol ImageFetchable: AnyObject {
     
