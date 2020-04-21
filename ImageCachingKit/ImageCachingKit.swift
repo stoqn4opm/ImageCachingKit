@@ -12,7 +12,8 @@ import UIKit
 
 extension ImageCachingKit {
     
-    fileprivate static var imagesCacheDirectoryName: String { return "ImageCachingKit" }
+    /// The subdirectory of the `NSCachesDirectory` directory that is used a a file system cache.
+    private static var imagesCacheDirectoryName: String { "ImageCachingKit" }
 }
 
 // MARK: - Throwable Errors
@@ -38,7 +39,11 @@ extension ImageCachingKit {
 /// NSCachesDirectory/ImageCachingKit
 /// ```
 /// for storing the cached images. The cleaning of the cache is managed by the operating system.
-public struct ImageCachingKit { }
+public struct ImageCachingKit {
+    
+    @available(*, unavailable)
+    private init() {}
+}
 
 // MARK: - Write Methods
 
@@ -51,7 +56,7 @@ extension ImageCachingKit {
     ///   - key: pass here the key under which you want this image cached. (example: the image name).
     /// - Throws: error in case the save operation fails.
     public static func saveImage(_ image: UIImage, forKey key: String) throws {
-        return try save(image, forKey: key, in: imagesCacheDirectory)
+        try save(image, forKey: key, in: imagesCacheDirectory)
     }
     
     private static func save(_ image: UIImage, forKey key: String, in url: URL?) throws {
@@ -75,7 +80,7 @@ extension ImageCachingKit {
     /// - Parameter key: the key under which you have cached the image.
     /// - Returns: the stored image, if found under this key.
     public static func readImageForKey(_ key: String) -> UIImage? {
-        return readForKey(key, in: imagesCacheDirectory)
+        readForKey(key, in: imagesCacheDirectory)
     }
     
     private static func readForKey(_ key: String, in url: URL?) -> UIImage? {
@@ -92,7 +97,8 @@ extension ImageCachingKit {
 
 extension ImageCachingKit {
     
-    static var imagesCacheDirectory: URL? { return createCacheSubdirectoryNamed(imagesCacheDirectoryName) }
+    /// Gives back `imagesCacheDirectoryName` in the form or `URL`
+    private static var imagesCacheDirectory: URL? { createCacheSubdirectoryNamed(imagesCacheDirectoryName) }
     
     private static func createCacheSubdirectoryNamed(_ name: String) -> URL? {
         guard let path = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first else { return nil }
